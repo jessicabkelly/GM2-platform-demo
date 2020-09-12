@@ -12,7 +12,7 @@ function scr_handle_vertical_movement(obj){
 	
 	if (!on_the_ground)
 	{
-		obj.gravity += 0.05;
+		obj.gravity += global.gravity_tick;
 	}
 	
 	if (on_the_ground)

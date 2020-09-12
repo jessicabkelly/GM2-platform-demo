@@ -5,19 +5,20 @@ function scr_handle_horiz_movement(obj){
 	
 	if (keyboard_check(ord("D")))
 	{
-		// move right
-		var is_something_to_the_right = place_meeting(obj.x+1,obj.y-global.collision_delta,obj_solid);
-		if (!is_something_to_the_right && (obj.x + global.sprite_size_px < global.max_x))
+		// move right		
+		if (obj.x + global.sprite_size_px < global.max_x)
 		{
-			obj.x += global.movement_increment;
+			obj.hspeed = global.movement_increment;
 		}
 	} else if (keyboard_check(ord("A")))
 	{
-		// move left
-		var is_something_to_the_left = place_meeting(obj.x+1,obj.y-global.collision_delta,obj_solid);
-		if (!is_something_to_the_left && (obj.x > 0))
+		// move left		
+		if (obj.x > 0)
 		{
-			 obj.x += -1 * global.movement_increment;
+			 obj.hspeed = -1 * global.movement_increment;
 		}		
+	} else 
+	{
+		obj.hspeed = 0;
 	}
 }
