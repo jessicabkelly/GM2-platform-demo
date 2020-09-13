@@ -1,0 +1,1 @@
+last_clicky_time = current_time;
