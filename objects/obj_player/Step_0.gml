@@ -5,3 +5,8 @@ if (y > global.max_y + global.sprite_size_px)
 {
 	room_restart();
 }
+
+if (y < 0 - 3 * global.sprite_size_px) // if sufficiently above screen (gravity flip)
+{
+	room_restart();
+}

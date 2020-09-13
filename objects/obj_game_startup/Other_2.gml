@@ -1,4 +1,5 @@
 global.clicky_speed = 333; //ms
+global.gravity_toggle_speed = 333;
 global.max_number_of_platforms = 3;
 
 global.movement_increment = 4;

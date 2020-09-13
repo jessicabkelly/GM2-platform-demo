@@ -7,7 +7,7 @@ function scr_handle_vertical_movement(obj){
 	if (on_the_ground && keyboard_check(vk_space))
 	{
 		on_the_ground = false;
-		obj.vspeed = -1 * global.jump_vspeed;
+		obj.vspeed = -1 * global.jump_vspeed * scr_determine_gravity_multiplier(obj);
 	}
 	
 	if (!on_the_ground)

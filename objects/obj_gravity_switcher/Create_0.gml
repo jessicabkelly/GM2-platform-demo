@@ -1,0 +1,1 @@
+last_gravity_switch_time = current_time;
