@@ -2,23 +2,35 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 
 function scr_handle_horiz_movement(obj){
-	
-	if (keyboard_check(ord("D")))
+	obj.hspeed = 0;
+	if (keyboard_check(ord("D")) && keyboard_check(vk_lshift))
+	{
+		if (obj.x + global.sprite_size_px < global.max_x)
+		{
+			obj.hspeed = global.booster_speed;
+		}
+	} else if (keyboard_check(ord("D")))
 	{
 		// move right		
 		if (obj.x + global.sprite_size_px < global.max_x)
 		{
 			obj.hspeed = global.movement_increment;
 		}
-	} else if (keyboard_check(ord("A")))
+	}
+	
+	if (keyboard_check(ord("A")) && keyboard_check(vk_lshift))
+	{	
+		if (obj.x > 0)
+		{
+			obj.hspeed = -1 * global.booster_speed;
+		}
+	}
+	else if (keyboard_check(ord("A")))
 	{
 		// move left		
 		if (obj.x > 0)
 		{
 			 obj.hspeed = -1 * global.movement_increment;
 		}		
-	} else 
-	{
-		obj.hspeed = 0;
 	}
 }
