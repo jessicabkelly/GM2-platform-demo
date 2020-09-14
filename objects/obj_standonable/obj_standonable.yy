@@ -1,16 +1,10 @@
 {
-  "spriteId": {
-    "name": "spr_cloud",
-    "path": "sprites/spr_cloud/spr_cloud.yy",
-  },
+  "spriteId": null,
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
-  "parentObjectId": {
-    "name": "obj_standonable",
-    "path": "objects/obj_standonable/obj_standonable.yy",
-  },
+  "parentObjectId": null,
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,
@@ -31,7 +25,7 @@
     "path": "folders/Objects.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_cloud",
+  "name": "obj_standonable",
   "tags": [],
   "resourceType": "GMObject",
 }

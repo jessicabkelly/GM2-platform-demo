@@ -10,9 +10,9 @@ function scr_handle_horiz_movement(obj){
 			obj.hspeed = global.booster_speed;
 		}
 	} else if (keyboard_check(ord("D")))
-	{
+	{		
 		// move right		
-		if (obj.x + global.sprite_size_px < global.max_x)
+		if ((obj.x + global.sprite_size_px < global.max_x) && !place_meeting(obj.x+1,obj.y,obj_solid))
 		{
 			obj.hspeed = global.movement_increment;
 		}
@@ -28,7 +28,7 @@ function scr_handle_horiz_movement(obj){
 	else if (keyboard_check(ord("A")))
 	{
 		// move left		
-		if (obj.x > 0)
+		if (obj.x > 0 && !place_meeting(obj.x-1, obj.y, obj_solid))
 		{
 			 obj.hspeed = -1 * global.movement_increment;
 		}		

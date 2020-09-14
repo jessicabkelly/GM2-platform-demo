@@ -8,8 +8,8 @@
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "obj_solid",
-    "path": "objects/obj_solid/obj_solid.yy",
+    "name": "obj_standonable",
+    "path": "objects/obj_standonable/obj_standonable.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
